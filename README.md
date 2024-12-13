@@ -40,10 +40,10 @@ This project presents an interactive **Pizza Sales Dashboard** designed to provi
 
 ## Dashboards
 
-### Dashboard 1
+### Home
 ![Pizza Sales Dashboard 1](./Dash1.png)
 
-### Dashboard 2
+### Best/Worst Sellers
 ![Pizza Sales Dashboard 2](./Dash2.png)
 
 ## Insights
