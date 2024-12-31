@@ -1,67 +1,94 @@
 # Pizza Sales Dashboard
 
 ## Overview
-This project presents an interactive **Pizza Sales Dashboard** designed to provide insights into sales trends, customer preferences, and business performance. The dashboard leverages visually compelling charts and key performance indicators (KPIs) to help stakeholders make data-driven decisions.
+This repository features a **Pizza Sales Dashboard** built using **Power BI**. The dashboard provides insights into pizza sales trends, customer preferences, and business performance through key metrics, interactive charts, and visualizations.
 
-## Features
+---
 
-### Key Performance Indicators (KPIs):
-- **Total Revenue:** $817.9K
-- **Total Orders:** 21K
-- **Total Pizzas Sold:** 50K
-- **Average Order Value:** $38.31
-- **Average Pizzas per Order:** 2.32
+## Dashboard Overview
 
-### Visualizations:
-1. **Daily Trend for Total Orders**:
-   - A bar chart showing order trends across days of the week.
-   - Highlights the busiest days (Friday & Saturday).
-
-2. **Monthly Trend for Total Orders**:
-   - A line chart displaying monthly order trends.
-   - Identifies peak ordering months (July & January).
-
-3. **Percentage of Sales by Pizza Category**:
-   - A pie chart showing the contribution of each pizza category to total sales.
-   - Categories: Classic (27%), Supreme (25%), Veggie (24%), Chicken (24%).
-
-4. **Total Pizzas Sold by Pizza Category**:
-   - A funnel chart presenting the number of pizzas sold for each category.
-
-5. **Percentage of Sales by Pizza Size**:
-   - A donut chart visualizing sales distribution by pizza size.
-   - Breakdown: Large (46%), Medium (30%), Regular (22%), X-Large (2%).
-
-6. **Top 5 Best Sellers by Revenue, Quantity, and Orders**:
-   - A bar chart identifying the top-performing pizzas.
-
-7. **Bottom 5 Best Sellers by Revenue, Quantity, and Orders**:
-   - A bar chart showcasing the underperforming pizzas.
-
-## Dashboards
-
-### Home
+### Home: KPIs and Trends  
 ![Pizza Sales Dashboard 1](./Dash1.png)
 
-### Best/Worst Sellers
+### Best/Worst Sellers: Performance Analysis  
 ![Pizza Sales Dashboard 2](./Dash2.png)
 
-## Insights
-- **Peak Sales Periods:** Sales are highest on weekends (Friday and Saturday) and peak during July and January.
-- **Top-Performing Category:** The Classic category leads in both sales and total orders.
-- **Popular Size:** Large-sized pizzas dominate the sales, contributing 46% of total revenue.
-- **Opportunities for Improvement:** Strategies can be developed to improve the performance of the bottom 5 pizzas.
+---
 
-## Tools Used
-- **Power BI**: For data visualization and creating the dashboards.
-- **Excel**: For data cleaning and preparation.
+## Key Metrics and Visualizations
+
+The dashboard tracks and analyzes essential business metrics and trends, helping stakeholders make informed decisions. It includes:
+
+### **Key Metrics**
+- **Total Revenue**: $817.9K
+- **Total Orders**: 21K
+- **Total Pizzas Sold**: 50K
+- **Average Order Value**: $38.31
+- **Average Pizzas per Order**: 2.32
+
+### **Visualizations**
+1. **Daily Order Trend**: Highlights the busiest days (Friday & Saturday) using a bar chart.
+2. **Monthly Order Trend**: A line chart showcasing peak months (July & January).
+3. **Sales by Pizza Category**: Displays contributions by category (Classic, Supreme, Veggie, Chicken) using a pie chart.
+4. **Pizzas Sold by Category**: A funnel chart presenting the number of pizzas sold per category.
+5. **Sales by Pizza Size**: A donut chart visualizing sales distribution by size (Large, Medium, Regular, X-Large).
+6. **Top 5 Best Sellers**: A bar chart of pizzas with the highest revenue, quantity, and orders.
+7. **Bottom 5 Sellers**: Highlights the least-performing pizzas in terms of sales and quantity.
+
+---
+
+## DAX Calculations
+
+Here are the key DAX calculations used in this dashboard:
+
+1. **Average Order Value:**
+   ```DAX
+   Average Order value = [Total Revenue] / [Total Order]
+   ```
+   Calculates the average revenue per order.
+
+2. **Average Pizzas per Order:**
+   ```DAX
+   Average Pizza per Order = [Total Pizza Sold] / [Total Order]
+   ```
+   Computes the average number of pizzas sold per order.
+
+3. **Total Orders:**
+   ```DAX
+   Total Order = DISTINCTCOUNT(pizza_sales[order_id])
+   ```
+   Counts the distinct number of orders.
+
+4. **Total Pizzas Sold:**
+   ```DAX
+   Total Pizza Sold = SUM(pizza_sales[quantity])
+   ```
+   Sums up the quantity of pizzas sold.
+
+5. **Total Revenue:**
+   ```DAX
+   Total Revenue = SUM(pizza_sales[total_price])
+   ```
+   Sums up the total revenue from sales.
+
+---
 
 ## How to Use
-1. Open the Power BI dashboard file to interact with the visualizations.
-2. Explore different filters, including categories and time periods, to analyze specific aspects of the data.
+
+1. Open the **Pizza Sales Dashboard.pbix** file in **Power BI Desktop**.
+2. Load or update the data from **pizza_sales.csv**.
+3. Explore the interactive visuals:
+   - **Home**: View KPIs and trends.
+   - **Best/Worst Sellers**: Analyze performance insights.
+
+---
 
 ## Contact
-If you have any questions or suggestions regarding this project, feel free to reach out:
 
+For questions, feedback, or collaboration:
+
+- **Name:** Bahaa Medhat Wanas  
 - **Email:** [bahaawanas427@gmail.com](mailto:bahaawanas427@gmail.com)  
-- **LinkedIn:** [Bahaa Wanas](https://www.linkedin.com/in/bahaa-wanas-9797b923a) 
+- **LinkedIn:** [Bahaa Wanas](https://www.linkedin.com/in/bahaa-wanas-9797b923a)  
+
+---
